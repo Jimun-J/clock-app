@@ -1,0 +1,85 @@
+.clock-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    height: 50%;
+    padding: 0 48px;
+}
+
+.clock-container {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ddd;
+}
+
+.clock-container .time {
+    font-size: 12rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.clock-container .time-zone {
+    font-size: 28px;
+}
+
+.clock-container .city {
+    color: #fff;
+    font-weight: bold;
+}
+
+.more-btn {
+    margin-top: 24px;
+    float: right;
+}
+
+.more-btn button {
+    border: none;
+    cursor: pointer;
+    padding: 6px 6px;
+    width: 140px;
+    border-radius: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    letter-spacing: 5px;
+}
+
+.arrow {
+    transition: 0.4s;
+    transform: rotate(180deg);
+}
+
+.arrow.active {
+    transform: rotate(0deg);
+}
+
+.more-btn button:active .arrow {
+    transform: scale(0.9);
+}
+
+.more-btn button div {
+    margin-left: 20px;
+}
+
+@media screen and (max-width: 768px) {
+    .clock-container .time {
+        font-size: 25vw;
+    }
+
+    .quote-container p {
+        width: 100%;
+    }
+
+    .more-btn {
+        margin-top: 72px;
+        float: left;
+    }
+
+    .clock-container {
+        padding: 0 20px;
+    }
+
+    .clock-container .time-zone {
+        font-size: 7vw;
+    }
+}

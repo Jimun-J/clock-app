@@ -1,0 +1,26 @@
+.quote-container {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    height: 50%;
+    padding: 72px 48px 0 48px;
+}
+
+.quote-container p {
+    width: 50%;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #ddd;
+}
+
+.quote-container .author {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+@media screen and (max-width: 768px) {
+    .quote-container {
+        padding: 48px 20px 0 20px;
+    }
+}
