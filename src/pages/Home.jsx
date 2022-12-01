@@ -11,15 +11,7 @@ const Home = ({ handleClick, click, location }) => {
 
     useEffect(() => {
         const fetchImage = async () => {
-            const hours = new Date().getHours();
-            let daytime = '';
-            if (hours >= 5 && hours <= 17) {
-                daytime = 'daytime';
-            } else {
-                daytime = 'night';
-            }
-            let query = `${daytime}-${location.city.name}`;
-            setBackground(await getImage(query));
+            setBackground(await getImage(`${location.city.name}`));
         }
 
         const fetchInfo = async () => {
@@ -29,7 +21,7 @@ const Home = ({ handleClick, click, location }) => {
         if (Object.keys(location).length !== 0) {
             fetchImage(); 
             fetchInfo();
-            setInterval(fetchImage, 3600000);
+            setInterval(fetchImage, 180000);
         }
     }, [location]);
 
